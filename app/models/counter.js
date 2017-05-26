@@ -14,6 +14,7 @@ counterModel.autoIncrement = function (document, idName, incValueName, next) {
             { upsert: true },       // creates the object if it doesn't exist. defaults to false.
             function (error, counter) {
                 if (error) return next(error);
+                console.log(counter);
                 document[incValueName] = counter.seq;
                 next();
             }
