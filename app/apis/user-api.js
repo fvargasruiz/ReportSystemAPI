@@ -6,7 +6,7 @@ var auth = require('../services/auth-service');
 /**
  * Initialize the API creating a 'Manager' user 
  */
-router.get('/init', auth.isDev, function (req, res) {
+router.get('/init', /*auth.isDev, */ function (req, res) {
     var user = new User({
         username: "fvarrui",
         password: "1234",
